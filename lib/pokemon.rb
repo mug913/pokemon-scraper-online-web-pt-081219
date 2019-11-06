@@ -23,6 +23,6 @@ class Pokemon
     sql = "SELECT * FROM pokemon WHERE id = ?"
     result = db.execute(sql, id)[0]
   #  binding.pry
-    Pokemon.new(name:result[1],type:result[2],id:result[0])
+    Pokemon.new(name:result[1],type:result[2],id:result[0],db:db)
   end
 end
